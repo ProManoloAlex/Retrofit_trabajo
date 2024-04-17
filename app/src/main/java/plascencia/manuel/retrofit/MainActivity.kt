@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = ZeldaAdapter(response)
 
 
         lifecycleScope.launch {
