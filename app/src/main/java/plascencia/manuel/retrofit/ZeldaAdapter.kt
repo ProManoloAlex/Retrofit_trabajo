@@ -15,14 +15,12 @@ class ZeldaAdapter(private val lista: List<ZeldaItem>) : RecyclerView.Adapter<Ze
 
     override fun onBindViewHolder(holder: ZeldaHolder, position: Int) {
         val item = lista[position]
-        holder.tvTitulo.text = item.name // Asume que ZeldaItem tiene una propiedad 'nombre'
-        holder.tvTipo.text = item.image // Asume que ZeldaItem tiene una propiedad 'tipo'
+        holder.tvTitulo.text = item.name //Tenemos la propiedad 'nombre'
+
         // Aquí puedes configurar ivFondo con una imagen usando Glide o Picasso
         Glide.with(holder.itemView.context)
             .load(item.image)
             .into(holder.ivFondo)
-
-
     }
 
     override fun getItemCount(): Int {
